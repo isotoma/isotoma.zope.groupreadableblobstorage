@@ -5,7 +5,11 @@ version = '0.0.1dev'
 setup(
     name = 'isotoma.zope.groupreadableblobstorage',
     version = version,
+    url = "http://github.com/isotoma/isotoma.zope.groupreadableblobstorage",
+    maintainer = "John Carr",
+    maintainer_email = "john.carr@isotoma.com",
     description = "Make blob storage group readable",
+    long_description = open('README.rst').read(),
     package_data = {
         '': ['README.rst', ],
     },
