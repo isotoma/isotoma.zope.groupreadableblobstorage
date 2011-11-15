@@ -1,2 +1,4 @@
 include isotoma/zope/groupreadableblobstorage/component.xml
+include README.rst
+include CHANGES
 
