@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.0.4 (unreleased)
+0.0.4 (2011-11-16)
 ------------------
 
 - Patch methods used to create temporary blob files so blob date is group readable
