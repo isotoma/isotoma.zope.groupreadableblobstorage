@@ -8,7 +8,9 @@ import tempfile
 import weakref
 
 from ZODB import utils
+from ZODB import blob
 from ZODB.blob import FilesystemHelper, BlobStorageMixin, Blob, is_blob_record
+from ZODB.blob import rename_or_copy_blob as old_rename
 from ZODB.blob import log, LAYOUT_MARKER
 
 def create(self):
@@ -135,4 +137,10 @@ def _create_uncommitted_file(self):
     return filename
 
 Blob._create_uncommitted_file = _create_uncommitted_file
+
+def never_chmod(f1, f2, chmod=False):
+    old_rename(f1, f2, False)
+
+blob.rename_or_copy_blob = never_chmod
+
 
